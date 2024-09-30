@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Nabvar } from "../components/Navbar";
 
 // cambiar fuentes
 const geistSans = localFont({
@@ -26,11 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="bg-[#070018]">
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header>
+          <Nabvar />
+        </header>
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );
