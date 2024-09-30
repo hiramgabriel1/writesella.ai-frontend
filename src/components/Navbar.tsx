@@ -6,7 +6,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useState } from "react";
 
 
-export function Nabvar() {
+export function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -15,7 +15,7 @@ export function Nabvar() {
   }
 
   return (
-    <nav className="sticky top-0 bg-slate-950/40 backdrop-blur-md flex flex-col filter  px-10 py-5  border-b-2 border-b-slate-50/10 lg:flex-row lg:justify-between lg:items-center ">
+    <nav className=" bg-slate-950/40 backdrop-blur-md flex flex-col filter  px-10 py-5  border-b-2 border-b-slate-50/10 lg:flex-row lg:justify-between lg:items-center ">
 
       <div className="text-white flex flex-auto  items-center justify-between">
 
@@ -29,7 +29,7 @@ export function Nabvar() {
         </button>
       </div>
 
-      <div className={`flex flex-col justify-center items-center py-10 gap-10 ${menuOpen ? "flex-col" : "hidden"} lg:${menuOpen ? "flex-row" : "flex-row"}  lg:p-0 xl:gap-72 lg:flex-row lg:static  lg:w-auto lg:items-center `}>
+        <div className={`flex flex-col justify-center items-center py-10 gap-10 ${menuOpen ? "flex" : "hidden"} lg:flex lg:flex-row lg:p-0 xl:gap-72 lg:static lg:w-auto lg:items-center `}>
         <ul className="flex flex-col text-slate-50/50 gap-10 text-center lg:flex-row">
           <a href="/" key="producto" className="hover:text-white" >producto</a>
           <a href="/" key="caso-de-usos" className="hover:text-white" >Caso de usos</a>

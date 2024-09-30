@@ -7,8 +7,8 @@ export default function HomePage() {
 
       <section className="relative ">
         <div className="z-1 hidden sm:flex sm:flex-col  justify-start   ">
-          <div className="absolute  m-auto mix-blend-screen  bg-blue-950/50  size-[500px] opacity-55  rounded-full  blur-3xl "></div>
-          <div className="absolute  m-auto mix-blend-screen bg-blue-950/50 size-[500px] opacity-55 rounded-full  blur-3xl -bottom-44 right-[610px]"></div>
+          <div className="absolute  m-auto   bg-blue-950/50  size-[500px] opacity-55  rounded-full filter blur-3xl mix "></div>
+          <div className="absolute  m-auto  bg-blue-950/50 size-[500px] opacity-55 rounded-full filter blur-3xl -bottom-20 right-[610px]"></div>
         </div>
 
         <section className="container py-20">
@@ -27,7 +27,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
       </section>
     </main>);
 }

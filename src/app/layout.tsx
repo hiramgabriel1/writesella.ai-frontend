@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Nabvar } from "../components/Navbar";
+import { Navbar } from "../components/Navbar";
 
 // cambiar fuentes
 const geistSans = localFont({
@@ -30,8 +30,8 @@ export default function RootLayout({
     <html lang="en" className="bg-[#070018]">
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header>
-          <Nabvar />
+        <header className="sticky z-10 top-0">
+          <Navbar />
         </header>
         <main>
           {children}
