@@ -15,7 +15,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className=" bg-slate-950/40 backdrop-blur-md flex flex-col filter  px-10 py-5  border-b-2 border-b-slate-50/10 lg:flex-row lg:justify-between lg:items-center ">
+    <nav className=" bg-slate-950/90 backdrop-blur-md flex flex-col filter  px-10 py-5  border-b-2 border-b-slate-50/10 lg:flex-row lg:justify-between lg:items-center ">
 
       <div className="text-white flex flex-auto  items-center justify-between">
 
