@@ -25,7 +25,7 @@ const dataAcordion = [
     title: "¿Cómo puedo cancelar mi suscripción?",
     content: "Puedes cancelar tu suscripción en cualquier momento. No hay cargos de cancelación. Simplemente ve a tu página de cuenta y haz clic en 'Cancelar mi suscripción'."
   }
-] 
+]
 
 export default function HomePage() {
 
@@ -50,29 +50,30 @@ export default function HomePage() {
           <div className="absolute top-20 translate-x-72 bg-[#120b40ff] size-[500px] opacity-85 rounded-full filter blur-3xl   "></div>
         </div>
 
-        <section className="relative container py-32 ">
-          <div className="  flex flex-col justify-center items-center gap-10">
+        <section className="relative container py-20">
+          <div className="  flex flex-col justify-center items-center gap-10 pb-36">
 
-            <header className="text-white/80">
+            <header className="flex text-white/80">
               <h1 className="flex bg-[#1D064F] py-1 px-5 rounded-md text-sm font-medium items-center gap-3">
                 <GoDotFill className="size-3 text-white" />
                 BETA 1.5 Disponible ahora
               </h1>
             </header >
 
-            <h1 className="font-semibold text-6xl sm:text-[70px] text-white text-center sm:max-w-[900px]">Escribe, Optimiza, Vende: Tu IA para Correos Personalizados y Efectivos</h1>
+            <div className="flex flex-col justify-center items-center gap-10">
+              <h1 className="text-white font-semibold  text-4xl sm:text-6xl text-center sm:max-w-[900px]">Escribe, Optimiza, Vende: Tu IA para Correos Personalizados y Efectivos</h1>
 
 
-            <p className="text-[#978AA1] text-xl max-w-[600px] text-center">Una herramienta inteligente que transforma la manera en que gestionas tus campañas de email marketing.</p>
+              <p className="text-[#978AA1] text-xl max-w-[600px] text-center">Una herramienta inteligente que transforma la manera en que gestionas tus campañas de email marketing.</p>
 
-            <div className="flex text-white gap-6">
-              <button className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
-                Demo
-                < FiArrowUpRight className="size-5" />
-              </button>
-              <button className="border border-white/40 px-5 py-2 rounded-lg">Ver planes</button>
+              <div className="flex text-white gap-6">
+                <button className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
+                  Demo
+                  < FiArrowUpRight className="size-5" />
+                </button>
+                <button className="border border-white/40 px-5 py-2 rounded-lg">Ver planes</button>
+              </div>
             </div>
-
           </div>
         </section>
       </section>
@@ -80,10 +81,10 @@ export default function HomePage() {
       <section className="relative">
         <div className=" py-32 bg-white w-full ">
           <div className="container flex flex-col justify-center items-center gap-10">
-            <h1 className="text-[#6B5E75] font-semibold text-5xl sm:text-[70px] text-center sm:max-w-[900px]">
+            <h1 className="text-[#6B5E75] font-semibold text-4xl sm:text-6xl text-center sm:max-w-[900px]">
               Lanza tus campañas de email sin esfuerzo, maximiza tus resultados
             </h1>
-            <p className="font- text-xl text-center text-[#6B5E75] max-w-[600px]">
+            <p className="font- text-xl text-center text-slate-500/90 max-w-[600px]">
               WriteAndSell.IA está diseñado pensando en tus objetivos de marketing, facilitando la creación, personalización y envío de campañas de correo electrónico. Concéntrate en lo que realmente importa: tus resultados de ventas.
             </p>
             <button className="bg-white text-[#7C3AED] border border-[#E1DDE4] p-3 rounded-xl">
@@ -182,7 +183,7 @@ export default function HomePage() {
               </h1>
             </header >
 
-            <h1 className="font-semibold text-6xl sm:text-[70px] text-white text-center sm:max-w-[1000px]">
+            <h1 className="text-white font-semibold  text-4xl sm:text-6xl text-center sm:max-w-[900px]">
               Maximiza tu efectividad con IA WriteAndSell.IA está aquí para revolucionar cómo interactúas con tus clientes.
             </h1>
 
@@ -201,7 +202,7 @@ export default function HomePage() {
         </section>
       </section>
 
-      <article className="relative py-32">
+      <article className="relative pb-24">
         <div className="flex flex-col justify-center items-center m-10 gap-20">
 
           <section className=" w-full py-[20%] mx-[5%] border-2 border-slate-600 rounded-2xl">
@@ -276,9 +277,9 @@ export default function HomePage() {
         </div>
       </article>
 
-      <section className=" relative pb-32">
+      <section className=" relative pb-40">
 
-        <header className="flex px-[10%] pb-24 ">
+        <header className="flex px-[10%] pb-5 ">
           <h3 className="text-white text-3xl ">
             Todas las herramientas que necesitas
           </h3>
@@ -357,7 +358,7 @@ export default function HomePage() {
       </section>
 
       <section className="relative bg-white">
-        <div className="  flex flex-col justify-center items-center gap-10 py-32">
+        <div className="  flex flex-col justify-center items-center gap-10 pt-32 ">
 
           <header className="text-[#7C3AED]">
             <h1 className="flex bg-[#F4F3FB] py-1 px-5 rounded-md text-sm font-medium items-center gap-3">
@@ -366,17 +367,17 @@ export default function HomePage() {
             </h1>
           </header >
 
-          <h1 className="font-semibold text-6xl sm:text-[60px] text-[#070018] text-center sm:max-w-[1100px]">
+          <h1 className="font-semibold text-4xl sm:text-6xl text-[#070018] text-center sm:max-w-[1100px]">
             Planes para todo tipo empresa o clientes
           </h1>
 
-          <p className="text-[#6B5E75] text-xl max-w-[600px] text-center">
+          <p className="text-[#6B5E75] text-xl max-w-[600px] text-center px-10 sm:px-0">
             Comienza con el plan que mejor se adapte a tus necesidades
           </p>
         </div>
       </section>
 
-      <section className="relative py-32 bg-white">
+      <section className="relative py-10 pb-32 bg-white">
         <div className="flex flex-col ">
           <ul className="flex flex-col  justify-center px-[5%] lg:flex-row lg:flex-wrap gap-8 py-6">
 
@@ -532,16 +533,16 @@ export default function HomePage() {
 
       <section className="relative">
 
-        <div className="flex flex-col justify-center items-center gap-10 py-32">
+        <div className="flex flex-col justify-center items-center gap-10 pt-32">
 
-          <header className="text-white/80">
+          <header className="text-white/80 pb-16">
             <h1 className="flex bg-[#1D064F] py-1 px-5 rounded-md text-sm font-medium items-center gap-3">
               <GoDotFill className="size-3 text-white" />
               FAQ
             </h1>
           </header >
 
-          <h1 className="font-semibold  text-6xl sm:text-[70px] text-white text-center sm:max-w-[1000px]">
+          <h1 className="font-semibold  text-4xl sm:text-6xl py-5 text-white text-center sm:max-w-[1000px]">
             Preguntas Frecuentes
           </h1>
 
@@ -576,7 +577,7 @@ export default function HomePage() {
               })}
             </div>
 
-            <div className="relative py-10">
+            <div className="relative pt-24">
               <div className=" flex  gap-3 justify-center items-center text-white border-t border-t-[#3B3242] border-opacity-30 py-7">
                 <h2 className="text-xl font-medium">
                   ¿Tienes más preguntas?
@@ -594,32 +595,32 @@ export default function HomePage() {
 
       <section className="relative py-32">
 
-          <div className="z-0 relative hidden sm:flex  justify-start items-start   h-full w-full ">
-            <div className="absolute -translate-y-36  bg-[#120b40ff]  size-[500px] opacity-85  rounded-full filter blur-3xl    "></div>
-            <div className="absolute  translate-x-80 bg-[#120b40ff] size-[500px] opacity-85 rounded-full filter blur-3xl   "></div>
-          </div>
+        <div className="z-0 relative hidden sm:flex  justify-start items-start   h-full w-full ">
+          <div className="absolute -translate-y-36  bg-[#120b40ff]  size-[500px] opacity-85  rounded-full filter blur-3xl    "></div>
+          <div className="absolute  translate-x-80 bg-[#120b40ff] size-[500px] opacity-85 rounded-full filter blur-3xl   "></div>
+        </div>
 
-          <div className="relative flex flex-col flex-auto gap-10 items-start px-[5%] py-32 lg:flex-row   ">
-            
-            <h1 className="w-full text-white text-2xl lg:text-5xl xl:text-6xl font-semibold">
-              Impulsa tu negocio con WriteAndSell.IA
-            </h1>
+        <div className="relative flex flex-col flex-auto gap-10 items-start px-[5%] py-32 lg:flex-row   ">
 
-            <div className="flex flex-col w-full flex-auto justify-center items-start gap-8   ">
-              <h3 className="text-[#978AA1]  lg:max-w-[400px]">
+          <h1 className="w-full text-white text-2xl lg:text-5xl xl:text-6xl font-semibold">
+            Impulsa tu negocio con WriteAndSell.IA
+          </h1>
+
+          <div className="flex flex-col w-full flex-auto justify-center items-start gap-8   ">
+            <h3 className="text-[#978AA1]  lg:max-w-[400px]">
               Prepara tu negocio para el éxito con WriteAndSell.IA, diseñado específicamente para mejorar tu marketing por correo electrónico.
-              </h3>
-              <form className="flex flex-col gap-6 pr-2 py-2 pl-4 lg:flex-row lg:border lg:border-[#3B3242] w-full justify-between rounded-xl  ">
-                <input placeholder="example@gmail.com" type="text"
-                 className="bg-transparent border-2 border-[#3B3242] p-3 rounded-xl outline-none pr-3 w-full text-white lg:border-none lg:py-0" 
-                 />
-                <button className="text-white px-10 py-3 rounded-xl w-full bg-[#3E3AF2]">
-                  Crear cuenta
-                </button>
-              </form>
-              
-            </div>
+            </h3>
+            <form className="flex flex-col gap-6 pr-2 py-2 pl-4 lg:flex-row lg:border lg:border-[#3B3242] w-full justify-between rounded-xl  ">
+              <input placeholder="example@gmail.com" type="text"
+                className="bg-transparent border-2 border-[#3B3242] p-3 rounded-xl outline-none pr-3 w-full text-white lg:border-none lg:py-0"
+              />
+              <button className="text-white px-10 py-3 rounded-xl w-full bg-[#3E3AF2]">
+                Crear cuenta
+              </button>
+            </form>
+
           </div>
+        </div>
 
       </section>
     </main>);
