@@ -3,11 +3,13 @@ import 'primereact/resources/primereact.min.css';           // Estilos base Prim
 import 'primeicons/primeicons.css';                         // Iconos PrimeReact
 import 'primeflex/primeflex.css';                           // PrimeFlex (opcional)
 import '../styles/globals.css';                             // Otros estilos globales
-
+import HomeLayout from './home/layout';
 import { AppProps } from 'next/app';
+import RootLayout from './layout';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+export function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
 }
+
 
 export default MyApp;
