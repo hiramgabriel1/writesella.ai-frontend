@@ -13,6 +13,7 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import React, { use, useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const dataAcordion = [
   {
@@ -73,10 +74,10 @@ export default function HomePage() {
                 <p className="text-[#978AA1] text-xl max-w-[600px] text-center">Una herramienta inteligente que transforma la manera en que gestionas tus campañas de email marketing.</p>
 
                 <div className="flex text-white gap-6">
-                  <button className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
+                  <Link href="/home" className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
                     Demo
                     < FiArrowUpRight className="size-5" />
-                  </button>
+                  </Link>
                   <button className="border border-white/40 px-5 py-2 rounded-lg">Ver planes</button>
                 </div>
               </div>

@@ -10,17 +10,19 @@ export default function Table() {
     
     const [data, SetData] = useState<any | null>([
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
+        {id:2, estado: "abierto", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
-        {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
-        {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
+        {id:1, estado: "pendiente", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
     
     ]);
 
     return(
-        <DataTable value={data} className='flex overflow-y-auto selection:bg-black' showHeaders  rowsPerPageOptions={[5, 10, 20]}>
+        <DataTable value={data} className='flex overflow-y-auto selection:bg-black max-h-[380px]'
+         showHeaders  rowsPerPageOptions={[5, 10, 20]}  >
+            <Column selectionMode='multiple'></Column>
             <Column field="id" header="ID" sortable></Column>
-            <Column field="estado" body={ <Status estado={data.estado} /> } sortable></Column>
+            <Column field="estado" body={Status} sortable></Column>
             <Column field="asunto" header="Asunto" sortable></Column>
             <Column field="solicitante" header="Solicitante" sortable></Column>
             <Column field="canal" header="Canal" sortable></Column>
