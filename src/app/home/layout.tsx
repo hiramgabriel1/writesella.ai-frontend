@@ -12,53 +12,65 @@ import { RxAvatar } from "react-icons/rx";
 import { FaPlus } from "react-icons/fa";
 import Link from "next/link";
 
+export default function HomeLayout({
+	children,
+}: Readonly<{ children: React.ReactNode }>) {
+	return (
+		<div>
+			<div className="flex flex-auto h-auto bg-white ">
+				<aside className="h-auto">
+					<div className="flex flex-col items-center py-3 bg-white h-full min-h-svh ">
+						<div className="pb-8">
+							<Logo size={"8"} />
+						</div>
+						<ul className="flex flex-col p-3 gap-3">
+							<Link
+								href={"/home"}
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<HiOutlineHome className="size-6" />
+							</Link>
 
-export default function HomeLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-    return (
-        <div>
-            <div className="flex flex-auto h-auto bg-white ">
+							<Link
+								href={"/home/email/send-email"}
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<FaInbox className="size-6" />
+							</Link>
 
-                <aside className="h-auto">
-                    <div className="flex flex-col items-center py-3 bg-white h-full min-h-svh ">
-                        <div className="pb-8">
-                            <Logo size={"8"} />
-                        </div>
-                        <ul className="flex flex-col p-3 gap-3">
+							<Link
+								href={"/home/email/pending-email"}
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<LuUsers2 className="size-6" />
+							</Link>
 
-                            <Link href={"/home"} className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <HiOutlineHome className="size-6" />
-                            </Link>
+							<Link
+								href="#"
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<GoShareAndroid className="size-6" />
+							</Link>
 
-                            <Link href={"/home/email/send-email"} className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <FaInbox className="size-6" />
-                            </Link>
+							<Link
+								href="#"
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<FaRegChartBar className="size-6" />
+							</Link>
 
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl" >
-                                <LuUsers2 className="size-6" />
-                            </Link >
+							<Link
+								href="#"
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<GoGear className="size-6" />
+							</Link>
+						</ul>
+					</div>
+				</aside>
 
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <GoShareAndroid className="size-6" />
-                            </Link>
-
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <FaRegChartBar className="size-6" />
-                            </Link>
-
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <GoGear className="size-6" />
-                            </Link>
-
-                        </ul>
-                    </div>
-                </aside>
-
-
-                <main className="flex flex-auto flex-col ">
-                    {children}
-                </main>
-
-            </div>
-        </div>
-    );
+				<main className="flex flex-auto flex-col ">{children}</main>
+			</div>
+		</div>
+	);
 }
