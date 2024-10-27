@@ -25,7 +25,7 @@ export function HomePage() {
   const [dates, setDates] = useState<any | null>(null);
 
   return (
-    <>
+    <div>
       <Navbar />
       <main className="bg-white">
         <div className="flex flex-auto  ">
@@ -125,7 +125,7 @@ export function HomePage() {
           }
           <section className="flex-auto">
             <div className="container relative flex flex-col px-5 max-h-[714px] overflow-y-auto no-scroll-cursor">
-              
+
               <section className="flex flex-col w-full items-center">
                 <header className="flex justify-between w-full  py-10 items-center">
                   <h2 className="font-bold text-3xl">Análisis</h2>
@@ -157,7 +157,7 @@ export function HomePage() {
                     percentage={15}
                   />
                 </div>
-              
+
               </section>
 
               <section className="flex flex-col w-full items-center pb-10">
@@ -191,7 +191,7 @@ export function HomePage() {
                       </div>
                     </div>
                     <div>
-                        <Paginator first={0} rows={10} totalRecords={120} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }} />
+                      <Paginator first={0} rows={10} totalRecords={120} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }} />
                     </div>
                   </header>
                   <Table />
@@ -223,7 +223,7 @@ export function HomePage() {
                       </div>
                     </div>
                     <div>
-                        <Paginator first={0} rows={10} totalRecords={120} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }} />
+                      <Paginator first={0} rows={10} totalRecords={120} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }} />
                     </div>
                   </header>
                   <Table />
@@ -233,22 +233,22 @@ export function HomePage() {
 
               <footer>
                 <div className="flex justify-between items-center py-5 text-slate-400">
-                    <div className="flex gap-3">
-                        <a href="#" className="hover:text-black">Privacidad</a>
-                        <a href="#" className="hover:text-black">Términos</a>
-                        <a href="#" className="hover:text-black">Política</a>
-                    </div>
-                    <div className="flex gap-2">
-                        <p>Última actividad:</p>
-                        <p>Hace 1 minuto</p>
-                    </div>
+                  <div className="flex gap-3">
+                    <a href="#" className="hover:text-black">Privacidad</a>
+                    <a href="#" className="hover:text-black">Términos</a>
+                    <a href="#" className="hover:text-black">Política</a>
+                  </div>
+                  <div className="flex gap-2">
+                    <p>Última actividad:</p>
+                    <p>Hace 1 minuto</p>
+                  </div>
                 </div>
               </footer>
             </div>
           </section>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

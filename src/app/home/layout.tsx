@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function HomeLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <>
+        <div>
             <div className="flex flex-auto h-auto bg-white ">
 
                 <aside className="h-auto">
@@ -29,7 +29,7 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                                 <HiOutlineHome className="size-6" />
                             </Link>
 
-                            <Link href={"/home/email"} className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
+                            <Link href={"/home/email/send-email"} className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
                                 <FaInbox className="size-6" />
                             </Link>
 
@@ -54,11 +54,11 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                 </aside>
 
 
-                <main className="flex flex-auto flex-col  ">
+                <main className="flex flex-auto flex-col ">
                     {children}
                 </main>
 
             </div>
-        </>
+        </div>
     );
 }

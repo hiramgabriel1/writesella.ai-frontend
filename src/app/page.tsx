@@ -74,7 +74,7 @@ export default function HomePage() {
                 <p className="text-[#978AA1] text-xl max-w-[600px] text-center">Una herramienta inteligente que transforma la manera en que gestionas tus campañas de email marketing.</p>
 
                 <div className="flex text-white gap-6">
-                  <Link href="/home" className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
+                  <Link href="/auth/register" className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
                     Demo
                     < FiArrowUpRight className="size-5" />
                   </Link>
@@ -94,16 +94,16 @@ export default function HomePage() {
               <p className="font- text-xl text-center text-slate-500/90 max-w-[600px]">
                 WriteAndSell.IA está diseñado pensando en tus objetivos de marketing, facilitando la creación, personalización y envío de campañas de correo electrónico. Concéntrate en lo que realmente importa: tus resultados de ventas.
               </p>
-              <button className="bg-white text-[#7C3AED] border border-[#E1DDE4] p-3 rounded-xl">
+              <a href="/auth/register" className="bg-white text-[#7C3AED] border border-[#E1DDE4] p-3 rounded-xl">
                 Comenzar
-              </button>
+              </a>
             </div>
 
             <article className=" hidden px-[5%] gap-6 py-24 xl:flex ">
 
-              <aside className="flex flex-col">
+              <div className="flex flex-col">
                 <ul className="flex flex-col gap-3 ">
-                  <div className="flex flex-col p-6 pl-10 pr-20 hover:bg-[#E1DDE4] justify-start   rounded-xl gap-5 ">
+                  <div className="flex flex-col p-6 pl-10 pr-20 hover:bg-[#E1DDE4] justify-start   rounded-xl gap-5  transition-all">
                     <header className="">
                       <h2 className="text-xl text-[#1D054F]">
                         Adaptable a Todo Tipos de Empresas
@@ -120,7 +120,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col p-6 pl-10 pr-20 hover:bg-[#E1DDE4] justify-start   rounded-xl gap-5 ">
+                  <div className="flex flex-col p-6 pl-10 pr-20 hover:bg-[#E1DDE4] justify-start   rounded-xl gap-5 transition-all">
                     <header className="">
                       <h2 className="text-xl text-[#1D054F]">
                         Adaptable a Todo Tipos de Empresas
@@ -137,7 +137,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col p-6 pl-10 pr-20 hover:bg-[#E1DDE4] justify-start   rounded-xl gap-5 ">
+                  <div className="flex flex-col p-6 pl-10 pr-20 hover:bg-[#E1DDE4] justify-start   rounded-xl gap-5 transition-all ">
                     <header className="">
                       <h2 className="text-xl text-[#1D054F]">
                         Adaptable a Todo Tipos de Empresas
@@ -155,7 +155,7 @@ export default function HomePage() {
                   </div>
 
                 </ul>
-              </aside>
+              </div>
 
               <div className="relative flex flex-col flex-auto  justify-center  items-center rounded-2xl ">
 
@@ -199,10 +199,10 @@ export default function HomePage() {
               </p>
 
               <div className="flex text-white gap-6">
-                <button className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
+                <a href="/auth/register" className="flex justify-center items-center gap-2 bg-[#3E3AF2] px-5 py-2 rounded-lg">
                   Empieza de forma gratuita
                   < FiArrowUpRight className="size-5" />
-                </button>
+                </a>
               </div>
 
             </div>
@@ -557,7 +557,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-3 justify-center items-center  w-auto px-[10%] ">
                 {dataAcordion.map((data, i) => {
                   return (
-                    <div key={i} className="flex flex-col w-full ">
+                    <div key={i} className="flex flex-col w-full  transition-all">
 
                       <div className={`flex justify-between items-center cursor-pointer gap-5 px-5 py-5  bg-[#140F21] rounded-t-xl
                         ${acordionOpen === i ? 'rounded-b-none' : 'rounded-b-xl bg-transparent'}
@@ -573,7 +573,7 @@ export default function HomePage() {
                       </div>
 
                       <div className={`px-5 py-3 rounded-b-xl  ${acordionOpen === i ? 'block ' : 'hidden '} bg-[#140F21]`}>
-                        <p className="text-[#6B5E75]">
+                        <p className="text-slate-300">
                           {data.content}
                         </p>
                       </div>

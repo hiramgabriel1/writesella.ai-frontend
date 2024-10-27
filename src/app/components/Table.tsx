@@ -6,7 +6,8 @@ import { DataTableProps } from 'primereact/datatable';
 import { useState } from 'react';
 import Status from './Status';
 
-export default function Table() {
+
+export default function Table({maxHeigth}: {maxHeigth: number}) {
     
     const [data, SetData] = useState<any | null>([
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
@@ -18,8 +19,8 @@ export default function Table() {
     ]);
 
     return(
-        <DataTable value={data} className='flex overflow-y-auto selection:bg-black max-h-[380px]'
-         showHeaders  rowsPerPageOptions={[5, 10, 20]}  >
+        <DataTable value={data} className='flex overflow-y-auto selection:bg-black' 
+         showHeaders  rowsPerPageOptions={[5, 10, 20]} scrollHeight={`${maxHeigth}px`}  >
             <Column selectionMode='multiple'></Column>
             <Column field="id" header="ID" sortable></Column>
             <Column field="estado" body={Status} sortable></Column>
