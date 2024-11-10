@@ -4,7 +4,7 @@ import {Column} from 'primereact/column';
 import { InputSwitch } from 'primereact/inputswitch';
 import { DataTableProps } from 'primereact/datatable'; 
 import { useState } from 'react';
-import Status from './Status';
+import Status from './StatusTable';
 
 
 export default function Table({maxHeigth}: {maxHeigth: number}) {
@@ -15,7 +15,6 @@ export default function Table({maxHeigth}: {maxHeigth: number}) {
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
         {id:1, estado: "pendiente", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
-    
     ]);
 
     return(

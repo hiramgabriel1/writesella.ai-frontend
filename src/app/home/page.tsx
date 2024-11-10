@@ -20,6 +20,8 @@ import { LuDot } from "react-icons/lu";
 import { PiLineVerticalLight } from "react-icons/pi";
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { IoFilterSharp } from "react-icons/io5";
+import { Skeleton } from "primereact/skeleton";
+import MessageEmail from "../components/messageEmail";
 
 export function HomePage() {
   const [dates, setDates] = useState<any | null>(null);
@@ -32,7 +34,7 @@ export function HomePage() {
           {
             // Section is message
           }
-          <aside className="relative flex flex-col p-5 bg-[#f7f9faff] rounded-t-xl gap-5 ">
+          <aside className="relative flex flex-col p-5 bg-[#f7f9faff] rounded-t-xl gap-5 max-h-[700px] overflow-y-auto no-scroll-cursor">
             <section>
               <header className="flex justify-between items-center ">
                 <h2 className="flex gap-3 items-center text-xl font-bold">
@@ -44,34 +46,13 @@ export function HomePage() {
                 </button>
               </header>
 
-              <article className="p-3">
-                <section className="flex gap-3 bg-white rounded-xl  px-5 py-3">
-                  <div>
-                    <Avatar
-                      className="bg-blue-600 text-white  "
-                      label="JO"
-                      shape="circle"
-                    ></Avatar>
-                  </div>
-                  <main className="flex flex-col gap-2">
-                    <div className="flex justify-between gap-5">
-                      <div className=" flex gap-3 items-center text-sm">
-                        <p>Javier Ortiz</p>
-                        <p className="text-black/50">Repile to you</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <TfiClip className="size-5" />
-                        <p className="text-black/50">45s</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center ">
-                      <p className="font-bold">Hey, how are you doing?</p>
-                      <div className="bg-blue-400 rounded-full size-4" />
-                    </div>
-                    <p className="text-sm">Email all sent through but ...</p>
-                  </main>
-                </section>
-              </article>
+              <section className="flex flex-col gap-5 my-5 max-h-[500px] overflow-y-auto no-scroll-cursor ">
+                <MessageEmail />
+                <MessageEmail />
+                <MessageEmail />
+                <MessageEmail />
+                <MessageEmail />
+              </section>
             </section>
 
             <section>
@@ -85,38 +66,15 @@ export function HomePage() {
                 </button>
               </header>
 
-              <article className="p-3">
-                <section className="flex gap-3 bg-white rounded-xl  px-5 py-3">
-                  <div>
-                    <Avatar
-                      className="bg-blue-600 text-white "
-                      label="JO"
-                      shape="circle"
-                    >
-                      {/*}
-                            <Badge className='overflow-visible bg-green-50' value="3" severity="danger"/>
-                        {*/}
-                    </Avatar>
-                  </div>
-                  <main className="flex flex-col gap-2">
-                    <div className="flex justify-between gap-5">
-                      <div className=" flex gap-3 items-center text-sm">
-                        <p>Javier Ortiz</p>
-                        <p className="text-black/50">Repile to you</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <TfiClip className="size-5" />
-                        <p className="text-black/50">45s</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center ">
-                      <p className="font-bold">Hey, how are you doing?</p>
-                      <div className="bg-blue-400 rounded-full size-4" />
-                    </div>
-                    <p className="text-sm">Email all sent through but ...</p>
-                  </main>
+                <section className="flex flex-col gap-5 my-5 max-h-[500px] overflow-y-auto no-scroll-cursor">
+                  <MessageEmail />
+                  <MessageEmail />
+                  <MessageEmail />
+                  <MessageEmail />
+                  <MessageEmail />
+                  <MessageEmail />
                 </section>
-              </article>
+              
             </section>
           </aside>
 
@@ -125,7 +83,6 @@ export function HomePage() {
           }
           <section className="flex-auto">
             <div className="container relative flex flex-col px-5 max-h-[714px] overflow-y-auto no-scroll-cursor">
-
               <section className="flex flex-col w-full items-center">
                 <header className="flex justify-between w-full  py-10 items-center">
                   <h2 className="font-bold text-3xl">Análisis</h2>
@@ -157,7 +114,6 @@ export function HomePage() {
                     percentage={15}
                   />
                 </div>
-
               </section>
 
               <section className="flex flex-col w-full items-center pb-10">
@@ -191,7 +147,14 @@ export function HomePage() {
                       </div>
                     </div>
                     <div>
-                      <Paginator first={0} rows={10} totalRecords={120} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }} />
+                      <Paginator
+                        first={0}
+                        rows={10}
+                        totalRecords={120}
+                        template={{
+                          layout: "PrevPageLink CurrentPageReport NextPageLink",
+                        }}
+                      />
                     </div>
                   </header>
                   <Table />
@@ -201,9 +164,7 @@ export function HomePage() {
                   <header className="flex justify-between">
                     <div className="flex gap-3 items-center py-8">
                       <div className="flex gap-1 items-center  ">
-                        <h3 className="text-xl font-semibold">
-                          Asignados (3)
-                        </h3>
+                        <h3 className="text-xl font-semibold">Asignados (3)</h3>
                         <LuDot className="size-5 text-slate-300" />
                         <p className="text-sky-400">(1) seleccionado</p>
                       </div>
@@ -223,20 +184,32 @@ export function HomePage() {
                       </div>
                     </div>
                     <div>
-                      <Paginator first={0} rows={10} totalRecords={120} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }} />
+                      <Paginator
+                        first={0}
+                        rows={10}
+                        totalRecords={120}
+                        template={{
+                          layout: "PrevPageLink CurrentPageReport NextPageLink",
+                        }}
+                      />
                     </div>
                   </header>
                   <Table />
                 </section>
-
               </section>
 
               <footer>
                 <div className="flex justify-between items-center py-5 text-slate-400">
                   <div className="flex gap-3">
-                    <a href="#" className="hover:text-black">Privacidad</a>
-                    <a href="#" className="hover:text-black">Términos</a>
-                    <a href="#" className="hover:text-black">Política</a>
+                    <a href="#" className="hover:text-black">
+                      Privacidad
+                    </a>
+                    <a href="#" className="hover:text-black">
+                      Términos
+                    </a>
+                    <a href="#" className="hover:text-black">
+                      Política
+                    </a>
                   </div>
                   <div className="flex gap-2">
                     <p>Última actividad:</p>

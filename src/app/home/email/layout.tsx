@@ -4,10 +4,14 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import Navbar from "@/app/components/navbar";
 import { GiRedCarpet } from "react-icons/gi";
-import { FaUserGroup } from "react-icons/fa6";
-import { TiTicket } from "react-icons/ti";
 import { BsMenuButton } from "react-icons/bs";
 import { useState } from "react";
+import { FaRegFolderOpen } from "react-icons/fa";
+import { RiGroupLine } from "react-icons/ri";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import { RiDeleteBin5Line } from "react-icons/ri";
+
 
 export default function EmailLayout({
   children,
@@ -42,7 +46,7 @@ export default function EmailLayout({
                   className="flex justify-between items-center text-black/70  hover:bg-sky-500/20 hover:text-sky-500  pr-3 pl-3 py-2 rounded-2xl gap-10"
                 >
                   <div className="flex items-center gap-3 w-full">
-                    <GiRedCarpet className="size-7" />
+                    <FaRegFolderOpen className="size-7" />
                     Tickets sin resolver
                   </div>
                   <p className="text-end">5</p>
@@ -54,7 +58,7 @@ export default function EmailLayout({
                   className="flex justify-between items-center text-black/70  hover:bg-sky-500/20 hover:text-sky-500  pr-3 pl-3 py-2 rounded-2xl gap-10"
                 >
                   <div className="flex items-center gap-3 w-full">
-                    <GiRedCarpet className="size-7" />
+                    <RiGroupLine className="size-7" />
                     Grupos de tickets
                   </div>
                   <p className="text-end">120</p>
@@ -78,7 +82,7 @@ export default function EmailLayout({
                   className="flex justify-between items-center text-black/70  hover:bg-sky-500/20 hover:text-sky-500 pr-3 pl-3 py-2 rounded-2xl gap-10"
                 >
                   <div className="flex items-center gap-3 ">
-                    <GiRedCarpet className="size-7" />
+                    <AiOutlineLoading3Quarters className="size-7" />
                     Tickets pendientes
                   </div>
                   <p className="text-end">1</p>
@@ -90,7 +94,7 @@ export default function EmailLayout({
                   className="flex justify-between items-center text-black/70  hover:bg-sky-500/20 hover:text-sky-500 pr-3 pl-3 py-2 rounded-2xl gap-10"
                 >
                   <div className="flex items-center gap-3 w-full">
-                    <GiRedCarpet className="size-7" />
+                    <IoCheckmarkDoneOutline className="size-7" />
                     Tickets resueltos
                   </div>
                   <p className="text-end">800</p>
@@ -102,7 +106,7 @@ export default function EmailLayout({
                   className="flex justify-between items-center text-black/70  hover:bg-sky-500/20 hover:text-sky-500 pr-3 pl-3 py-2 rounded-2xl gap-10"
                 >
                   <div className="flex items-center gap-3 w-full">
-                    <GiRedCarpet className="size-7" />
+                    <RiDeleteBin5Line className="size-7" />
                     Tickets eliminados
                   </div>
                   <p className="text-end">1,500</p>

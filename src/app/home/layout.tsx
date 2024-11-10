@@ -18,7 +18,7 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
         <div>
             <div className="flex flex-auto h-auto bg-white ">
 
-                <aside className="h-auto">
+                <aside className="h-auto border-r-2 border-r-slate-100/50">
                     <div className="flex flex-col items-center py-3 bg-white h-full min-h-svh ">
                         <div className="pb-8">
                             <Logo size={"8"} />
@@ -33,7 +33,7 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                                 <FaInbox className="size-6" />
                             </Link>
 
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl" >
+                            <Link href="/home/recurrent" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl" >
                                 <LuUsers2 className="size-6" />
                             </Link >
 
