@@ -5,7 +5,7 @@ import { RxAvatar } from 'react-icons/rx';
 
 export default function Navbar() {
     return (
-        <header className="bg-white" >
+        <header className="relative z-10 bg-white backdrop-blur-xl " >
             <nav className="flex justify-between py-4 items-center px-5 ">
                 <div>
                     <button className="flex bg-[#129cffff] py-2 px-3 gap-3 justify-center items-center text-white rounded-xl">

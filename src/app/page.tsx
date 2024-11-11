@@ -49,7 +49,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-10">
         <Navbar />
       </header>
-      <main>
+      <main className="overflow-y-auto max-h-screen no-scroll-cursor">
         <section className="relative ">
 
           <div className="z-0 relative hidden sm:flex  justify-start items-start  px-20 h-full w-full ">

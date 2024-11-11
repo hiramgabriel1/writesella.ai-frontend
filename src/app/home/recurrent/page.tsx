@@ -6,16 +6,31 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { useState } from "react";
 import UserTable from "@/app/components/UserTable";
+import { redirect } from "next/navigation";
 
 const image = require("../../../../public//img/HeaderRecurrent.jpg");
 
 export default function RecurrentPage() {
 
   const [data, setData]= useState<any | null>([
-    {client: {image: "https://th.bing.com/th/id/OIP.csKI3mTv1bIwR80C3RhcAgHaE8?rs=1&pid=ImgDetMain", name: "Angélica ramos"}, email: "Angélica@gmail.com", phone: "8956-9717", tags: "lead", lastContact: "jul 22, 2022"},
-    {client: {image: "https://th.bing.com/th/id/OIP.csKI3mTv1bIwR80C3RhcAgHaE8?rs=1&pid=ImgDetMain", name: "Angélica ramos"}, email: "Angélica@gmail.com", phone: "8956-9717", tags: "lead", lastContact: "jul 22, 2022"},
-    {client: {image: "https://th.bing.com/th/id/OIP.csKI3mTv1bIwR80C3RhcAgHaE8?rs=1&pid=ImgDetMain", name: "Angélica ramos"}, email: "Angélica@gmail.com", phone: "8956-9717", tags: "lead", lastContact: "jul 22, 2022"},
+    {id:1 , client: {image: "https://th.bing.com/th/id/OIP.csKI3mTv1bIwR80C3RhcAgHaE8?rs=1&pid=ImgDetMain", name: "Angélica ramos"}, email: "Angélica@gmail.com", phone: "8956-9717", tags: "lead", lastContact: "jul 22, 2022"},
+    {id:2 , client: {image: "https://th.bing.com/th/id/OIP.csKI3mTv1bIwR80C3RhcAgHaE8?rs=1&pid=ImgDetMain", name: "Angélica ramos"}, email: "Angélica@gmail.com", phone: "8956-9717", tags: "lead", lastContact: "jul 22, 2022"},
+    {id:3 , client: {image: "https://th.bing.com/th/id/OIP.csKI3mTv1bIwR80C3RhcAgHaE8?rs=1&pid=ImgDetMain", name: "Angélica ramos"}, email: "Angélica@gmail.com", phone: "8956-9717", tags: "lead", lastContact: "jul 22, 2022"},
   ])
+
+  const handleCellCLik = (id: number) =>{
+    redirect("/home/info-client")
+  }
+  const clickableColumnTemplate = (id: number) => {
+    return (
+      <span
+        onClick={() => handleCellCLik(id)}
+        className="text-xl font-bold"
+      >
+        ...
+      </span>
+    );
+  };
 
   return (
     <>
@@ -41,12 +56,13 @@ export default function RecurrentPage() {
           </div>
           <div className="flex flex-col items-center justify-center w-full">
             <DataTable value={data} stripedRows  className="w-full" showHeaders  rowsPerPageOptions={[5, 10, 20]} >
-              <Column selectionMode='multiple'></Column>
+              <Column selectionMode='multiple' ></Column>
               <Column field="client" body={UserTable} header="Rodos los clientes (4618)"></Column>
               <Column field="email" header="Email"></Column>
               <Column field="phone" header="Teléfono"></Column>
               <Column field="tags" header="Etiquetas"></Column>
               <Column field="lastContact" header="Último contácto"></Column>
+              <Column field="id" body={clickableColumnTemplate}></Column>
               </DataTable>
               <button className="text-[#139CFFFF]">see more</button>
           </div>
