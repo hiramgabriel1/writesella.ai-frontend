@@ -1,0 +1,97 @@
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .ticket-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .ticket-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .via-chat {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .status-dropdown {
+    position: relative;
+  }
+  
+  .status-dropdown button {
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .status-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .dropdown-content p:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .ticket-info {
+    margin-top: 20px;
+  }
+  
+  .info-header p {
+    margin: 5px 0;
+  }
+  
+  .contact-info p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .response-area {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .response-area textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+    min-height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .send-button {
+    align-self: flex-end;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
