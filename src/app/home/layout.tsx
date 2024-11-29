@@ -32,7 +32,7 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                                 <LuUsers2 className="size-6" />
                             </Link >
 
-                            <Link href="/home/chart" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
+                            <Link href="/dash" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
                                 <FaRegChartBar className="size-6" />
                             </Link>
 
