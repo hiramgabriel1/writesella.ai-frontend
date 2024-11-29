@@ -157,7 +157,7 @@ export function HomePage() {
                       />
                     </div>
                   </header>
-                  <Table />
+                  <Table/>
                 </section>
 
                 <section className=" flex flex-col pt-16 ">

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Status from './StatusTable';
 
 
-export default function Table({maxHeigth}: {maxHeigth: number}) {
+export default function Table({maxHeigth, sizeText}: {maxHeigth?: number, sizeText?: string}) {
     
     const [data, SetData] = useState<any | null>([
         {id:1, estado: "nuevo", asunto: "crear un nuevo proyecto", solicitante: "Javier Ortiz", canal: "Email", tipo: "Proyecto", cesionario: "Javier Ortiz", fecha: "2021-10-10"},
@@ -18,7 +18,7 @@ export default function Table({maxHeigth}: {maxHeigth: number}) {
     ]);
 
     return(
-        <DataTable value={data} className='flex overflow-y-auto selection:bg-black' 
+        <DataTable value={data} className='flex overflow-y-auto text-sm w-full' 
          showHeaders  rowsPerPageOptions={[5, 10, 20]} scrollHeight={`${maxHeigth}px`}  >
             <Column selectionMode='multiple'></Column>
             <Column field="id" header="ID" sortable></Column>

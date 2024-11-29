@@ -5,11 +5,6 @@ import { FaRegChartBar } from "react-icons/fa";
 import { GoShareAndroid } from "react-icons/go";
 import { GoGear } from "react-icons/go";
 import { Logo } from "../../../public/img/logo";
-import { BiSearchAlt } from "react-icons/bi";
-import { IoNotificationsOutline } from "react-icons/io5";
-import { BiMessageSquareDetail } from "react-icons/bi";
-import { RxAvatar } from "react-icons/rx";
-import { FaPlus } from "react-icons/fa";
 import Link from "next/link";
 
 
@@ -37,12 +32,12 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                                 <LuUsers2 className="size-6" />
                             </Link >
 
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <GoShareAndroid className="size-6" />
+                            <Link href="/home/chart" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
+                                <FaRegChartBar className="size-6" />
                             </Link>
 
                             <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <FaRegChartBar className="size-6" />
+                                <GoShareAndroid className="size-6" />
                             </Link>
 
                             <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
