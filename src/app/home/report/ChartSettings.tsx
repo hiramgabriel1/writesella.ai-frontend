@@ -2,7 +2,7 @@ import React from "react";
 
 const ChartSettings: React.FC = () => {
   return (
-    <div className="bg-gray p-6 shadow rounded">
+      <div className="bg-gray p-6 shadow rounded">
       {/* Título */}
       <h2 className="font-bold text-gray-800 mb-4">Tipo de gráfico</h2>
 

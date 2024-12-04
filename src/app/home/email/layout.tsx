@@ -11,6 +11,7 @@ import { RiGroupLine } from "react-icons/ri";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import { redirect } from "next/navigation";
 
 
 export default function EmailLayout({
@@ -25,6 +26,10 @@ export default function EmailLayout({
       setClicButton(i);
     }
   };
+
+  const redirectAdmin = () => {
+    return redirect("/home/ticket-detail");
+  }
 
   return (
     <>
@@ -42,7 +47,7 @@ export default function EmailLayout({
             <ul className="flex flex-col gap-3 p-5 w-full">
               <li>
                 <Link
-                  href=""
+                  href="send-email"
                   className="flex justify-between items-center text-black/70  hover:bg-sky-500/20 hover:text-sky-500  pr-3 pl-3 py-2 rounded-2xl gap-10"
                 >
                   <div className="flex items-center gap-3 w-full">
@@ -115,13 +120,13 @@ export default function EmailLayout({
             </ul>
 
             <div>
-              <Link
-                href="send-email"
+              <button
+                onClick={redirectAdmin}
                 className="flex items-center gap-3 text-yellow-500 px-8"
               >
                 Administrar vistas
                 <BsArrowRight />
-              </Link>
+              </button>
             </div>
           </div>
         </aside>
