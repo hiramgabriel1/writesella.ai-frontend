@@ -24,9 +24,12 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                                 <HiOutlineHome className="size-6" />
                             </Link>
 
-                            <Link href={"/home/email/send-email"} className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <FaInbox className="size-6" />
-                            </Link>
+							<Link
+								href={"/home/email/send-email"}
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<FaInbox className="size-6" />
+							</Link>
 
                             <Link href="/home/recurrent" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl" >
                                 <LuUsers2 className="size-6" />
@@ -40,20 +43,18 @@ export default function HomeLayout({ children, }: Readonly<{ children: React.Rea
                                 <GoShareAndroid className="size-6" />
                             </Link>
 
-                            <Link href="#" className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl">
-                                <GoGear className="size-6" />
-                            </Link>
+							<Link
+								href="#"
+								className="hover:bg-[#dfe1e6ff] py-2 px-4 rounded-xl"
+							>
+								<GoGear className="size-6" />
+							</Link>
+						</ul>
+					</div>
+				</aside>
 
-                        </ul>
-                    </div>
-                </aside>
-
-
-                <main className="flex flex-auto flex-col ">
-                    {children}
-                </main>
-
-            </div>
-        </div>
-    );
+				<main className="flex flex-auto flex-col ">{children}</main>
+			</div>
+		</div>
+	);
 }
